@@ -1,0 +1,206 @@
+<!-- Steven Chye, z5257742 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>LurkForWork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- You can add your styles and scripts here -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/global.css"/>
+    <!-- https://getbootstrap.com/ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    </header>
+    <main role="main">
+        <!-- Login screen --> 
+        <div id="login-screen">
+            <div class="login-reg-screen">
+                <h1>Login:</h1>
+                Email: <input id="login-email" type="text" value="augustine@email.com">
+                Password: <input id="login-password" type="password" value="august"> 
+                <button class="btn btn-primary" id="btn-login">Login</button>
+                <a id="register-switch-btn">Register</a>
+            </div>
+        </div>
+        
+        <!--Register Screen-->
+        <div id="register-screen">
+            <div class="login-reg-screen">
+                <h1>Register:</h1>
+                Name: <input id="register-name" type="text"> 
+                Email: <input id="register-email" type="text">
+                Password: <input id="register-password" type="password"> 
+                <button id="password-strength">Password Strength</button>
+                <br>
+                Confirm Password: <input id="register-confirm-password" type="password"> 
+                <button class="btn btn-primary" id="btn-register">Register</button>
+                <a id="login-switch-btn">Login</a>  
+            </div>
+        </div>
+
+        <div id="navbar">
+            <ul>
+                <li><a id="add-jobs">Add Job</a></li>
+                <li><a id="jobs-board-link-nav">Jobs Board</a></li>
+                <li><a id="profile-link-nav">My Profile</a></li>
+                <li><a id=follow-someone>FOLLOW SOMEONE</a></li>
+            </ul>
+        </div>
+
+        <div class="profile-page" id="profile-page">
+            <p id="profile-image-text-none"></p>
+            <img id="profile-image">
+            <input id="profile-image-upload" type="file" accept="image/jpeg, image/png, image/jpg">
+            <br>
+            <b>Name:</b> <input id="profile-name" type="text"> 
+            <b>Email:</b> <input id="profile-email" type="text">
+            <b>Password:</b> <input id="profile-password" type="password"> 
+            <b>Confirm Password:</b><input id="profile-confirm-password" type="password"><br> 
+            <input class="btn btn-secondary" id="profile-save" type="submit" value="SAVE">
+            <br>
+            <div class="own-followers"></div>
+            <b><u>Posted Jobs:</u></b><br>
+            <div class="userProfile"></div>
+        </div>
+
+        <!-- Register empty name modal -->
+        <div id="name-modal" class="modal-container">
+            <div class="modals-content" id="name-modal-content">
+                <div class="close-button" id="name-modal-close">&times;</div>
+                <p id="#email-modal-text">Please enter a name</p>
+            </div>
+        </div>
+
+        <!-- Register empty email modal -->
+        <div id="email-modal" class="modal-container">
+            <div class="modals-content" id="email-modal-content">
+                <div class="close-button" id="email-modal-close">&times;</div>
+                <p>Please enter an email address</p>
+            </div>
+        </div>
+
+        <!-- Register valid email regex modal -->
+        <div id="email-regex-modal" class="modal-container">
+            <div class="modals-content" id="email-regex-modal-content">
+                <div class="close-button" id="email-regex-modal-close">&times;</div>
+                <p>Please enter a valid email address</p>
+            </div>
+        </div>
+
+        <!-- Register valid passwrod modal -->
+        <div id="pwd-modal" class="modal-container">
+            <div class="modals-content" id="pwd-modal-content">
+                <div class="close-button" id="pwd-modal-close">&times;</div>
+                <p>Passwords do not match.</p>
+            </div>
+        </div>
+
+        <!-- Register valid passwrod modal -->
+        <div id="pwd-modal" class="modal-container">
+            <div class="modals-content" id="pwd-modal-content">
+                <div class="close-button" id="pwd-modal-close">&times;</div>
+                <p>Passwords do not match.</p>
+            </div>
+        </div>
+
+        <!-- Login valid email/password modal -->
+        <div id="base-error-modal" class="modal-container">
+            <div class="modals-content" id="base-error-modal-content">
+                <div class="close-button" id="base-error-modal-close">&times;</div>
+                <p id="base-error-text"></p>
+            </div>
+        </div>
+
+        <!-- Profile valid email modal -->
+        <div id="profile-email-modal" class="modal-container">
+            <div class="modals-content" id="profile-email-modal-content">
+                <div class="close-button" id="profile-email-modal-close">&times;</div>
+                <p>Either this is your email or someone already has it :(</p>
+            </div>
+        </div>
+
+        <!-- Feed - follow someone by entering their email address -->
+        <div id="follow-someone-input-modal" class="modal-container">
+            <div class="modals-content" id="feed-follow-content">
+                <div class="close-button" id="feed-follow-close">&times;</div>
+                <div class="follow-someone-input-container">
+                    <input type="text" id="feed-follow-input">
+                    <input type="submit" id="feed-follow-submit">
+                </div>
+            </div>
+        </div>
+
+        <!-- Feed - create a job! -->
+        <div id="create-job-modal" class="modal-container">
+            <div class="modals-content" id="create-job-content">
+                <div class="close-button" id="create-job-close">&times;</div>
+                <div class="create-job-content-container">
+                    <br>
+                    Title: <input type="text" id="create-job-title">
+                    <br>
+                    <form id="job-image-form">
+                    Image: <br>
+                    <input id="create-job-image" type="file" accept="image/jpeg, image/png, image/jpg">
+                    </form>
+                    <br>
+                    Start Date: <input type="text" id="create-job-start">
+                    <br>
+                    Job Description: <input type="text" id="create-job-desc">
+                    <br>
+                    <input type="submit" id="create-job-submit">
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile delete job -->
+        <div id="delete-job-modal" class="modal-container">
+            <div class="modals-content" id="delete-job-modal-content">
+                <div class="close-button" id="delete-job-close">&times;</div>
+                <p id="delete-job-text">Are you sure you want to delete this job?</p>
+                <button id="delete-job-button">DELETE</button>
+            </div>
+        </div>
+
+        <!-- Profile valid email modal -->
+        <div id="create-job-error-modal" class="modal-container">
+            <div class="modals-content" id="create-job-error-modal-content">
+                <div class="close-button" id="create-job-error-modal-close">&times;</div>
+                <p id="create-job-error-text"></p>
+            </div>
+        </div>
+
+        <!-- Comment modal -->
+        <div id="comment-input-modal" class="modal-container">
+            <div class="modals-content" id="comment-modal-content">
+                <div class="close-button" id="comment-modal-close">&times;</div>
+                <p>Cannot leave an empty comment. Sorry!</p>
+            </div>
+        </div>
+
+        <div class="other-profiles"></div>
+
+        <!--News Feed-->
+        <div class="news-feed-container" id="news-feed">
+        </div>
+
+        <!--Loading balls-->
+        <div class="loading-balls">
+            <div class="loading">
+                <div id="dot-one">.</div>
+                <div id="dot-two">.</div>
+                <div id="dot-three">.</div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; lurkforwork.com 2022</p>
+    </footer>
+    <script type="module" src="src/main.js"></script>
+    <script type="module" src="src/jobActions.js"></script>
+</body>
+</html>

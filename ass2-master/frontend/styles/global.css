@@ -1,0 +1,236 @@
+/* base styles, feel free to edit */
+html, body {
+    height: 100%;
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 40px;
+}
+
+#login-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#register-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login-reg-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-login, #btn-register {
+    margin-top: 10px;
+    width: 200px;
+}
+
+.login-reg-screen input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+#register-switch-btn, #login-switch-btn {
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+#register-screen {
+    display: none;
+}
+
+a {
+    width: 25px;
+}
+
+#navbar {
+    display: none;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    background-color: #F3F2EF;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: 20px 25px;
+}
+
+#navbar ul li a:hover {
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #106CF6;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.post-interactions {
+    display: flex;
+    flex-direction: row;
+}
+
+.job-like-count {
+    padding-right: 10px;
+}
+
+.comment-count {
+    padding-left: 10px;
+}
+
+.profile-page, .other-profiles {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.like-button, .comment-input-button {
+    background-color: lightblue;
+}
+
+/* Modal */
+.modal-container {
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 200ms ease-in-out;
+    padding-top: 100px;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+/* modal Content */
+.modals-content {
+    border: 1px solid black;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* close button on modal */
+.close-button {
+    color: black;
+    font-size: 1.25rem;
+    font-weight: bold;
+    float: right;
+}
+
+.close-button:hover, .close-button:focus {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.comment-list {
+    padding-top: 20px;
+}
+
+.liked-yes, .yes-followed {
+    background-color: lightgreen;
+}
+
+.liked-no {
+    background-color: lightblue;
+}
+
+#profile-image {
+    position: static;
+    top: 18%;
+    left: 10%;
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#profile-image-text-none {
+    color: red;
+    border: 1px solid red;
+}
+
+.follow-someone-input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#feed-follow-submit {
+    padding-right: 20px;
+}
+
+.create-job-content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.loading-balls {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+	font-size: 80px;
+	display: flex;
+    flex-direction: row;
+}
+
+#dot-one {
+    opacity: 0; 
+    animation: balls-appear 2s normal forwards;
+    animation-delay: 1s;
+}
+
+#dot-two {
+	opacity: 0; 
+    animation: balls-appear 2s normal forwards;
+    animation-delay: 2s;
+}
+
+#dot-three {
+	opacity: 0; 
+    animation: balls-appear 2s normal forwards;
+    animation-delay: 3s;
+}
+
+@keyframes balls-appear {
+    100% {
+        opacity: 1;
+    }
+}
+
+#password-strength {
+    color: black;
+}
