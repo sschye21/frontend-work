@@ -1,0 +1,64 @@
+<!-- Steven Chye, z5257742-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form - Task 4</title>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="input-container">
+        <form id="dynamicForm">
+            <table border="1">
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="firstName" oninput="checkFirstName()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="lastName" oninput="checkLastName()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of birth</td>
+                    <td>
+                        <input type="text" name="DOB" oninput="checkDOB()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Favourite Animal</td>
+                    <td>
+                        <select name="animal" onchange="renderOutput()">
+                            <option value="Dog" selected>Dog</option>
+                            <option value="Puppy">Puppy</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cities lived in</td>
+                    <td>
+                        <span id="citiesID" onclick="renderOutput()">
+                            <input type="checkbox" id="Syd" value="Sydney">Sydney<br>
+                            <input type="checkbox" id="Melb" value="Melbourne">Melbourne<br>
+                            <input type="checkbox" id="Adelaide" value="Adelaide">Adelaide<br>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br>
+        <input type="reset" name="reset-button" value="Remove" onclick="resetValues()">
+    </div>
+    <br>
+    <div>
+        <textarea id="resultText" rows="10" cols="50"></textarea>
+    </div>
+</body>
+</html>
+

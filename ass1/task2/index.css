@@ -1,0 +1,115 @@
+/* Steven Chye, z5257742 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    height: 1289px;
+    max-width: 100%;
+    background: #316E74;
+    background: linear-gradient(
+        to bottom,
+        #316E74 0%,
+        #316E74 64%,
+        #315074 64%,
+        #315074 100%
+    );
+    text-align: center;
+    margin-top: -28px;
+    margin-left: -8px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 44px;
+    color: white;
+    font-size: 35px;
+}
+
+.body-text {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.second-body-text {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: -5px;
+}
+
+.second-body-text > h1 {
+    padding-top: 19px;
+}
+
+#top-text {
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    padding-right: 41px;
+    padding-left: 41px;
+    font-size: 21px;
+}
+
+.top-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 15px;
+    margin-bottom: 45px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+.top-icon-container img {
+    width: 75px;
+    height: auto;
+}
+
+.bottom-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 130px;
+    min-height: 0px;
+}
+
+.bottom-icon-container img {
+    width: 100px;
+    height: auto;
+}
+
+.bottom-icon-items {
+    max-width: 400px;
+}
+
+.bottom-icon-items > a {
+    color: #7AAEDA;
+    margin-top: 0px;
+    font-size: 19px;
+}
+
+#bottom-text {
+    margin-top: -22px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#bottom-title {
+    color: white;
+    font-size: 30px;
+    padding-top: 17px;
+    position: relative;
+}

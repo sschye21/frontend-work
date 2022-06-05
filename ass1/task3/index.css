@@ -1,0 +1,570 @@
+body {
+    background-color: #000D47;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.billing-frequency {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 36px;
+    margin-bottom: 62px;
+}
+
+.billing-frequency > h1 {
+    margin: 0px 20px 0px 20px;
+    font-size: 19px;
+}
+
+.toggle-button {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* hides the auto generated checkbox */
+.toggle-button input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.round-slider {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    background-color: rgb(138, 241, 124);
+    transition: .5s;
+    width: 65px;
+    height: 17px;
+    border-radius: 20px;
+    margin-top: 3px;
+}
+
+/* toggle button */
+.round-slider::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;   
+    background-color: white;
+    transition: .5s;
+    top: -6px;
+    left: -6px;
+    border-radius: 50%;
+}
+
+/* moves the slider to the right */
+input:checked + .round-slider::before {
+    transform: translateX(46px);
+}
+
+input:checked + .round-slider {
+    background-color: #51C2D9;
+}
+
+@media screen and 
+    (min-width: 1100px) {
+    
+    .degree-tab-container {
+        display: none;
+    }
+
+    .degree-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+        max-width: 100%;
+    }
+
+    .masters-doc-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .bachelor-container {
+        border: thin solid white;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        box-sizing: border-box;
+        width: 438px;
+        height: 838px;
+        margin-top: 5px;
+    }
+
+    .bachelor-text-container {
+        margin-top: 48px;
+        text-align: center;
+    }
+
+    #bachelor-promo-desc {
+        padding-left: 80px;
+        padding-right: 80px;
+        line-height: 28px;
+        margin-top: -5px;
+    }
+
+    #starting-at {
+        color: grey;
+        font-size: 18px;
+        padding-top: 5px;
+    }
+
+    .price-container {
+        padding-bottom: 30px;
+    }
+
+    #dollar-sign {
+        font-size: 24px;
+        position: relative;
+        margin-right: 83px; 
+        margin-top: 2px;
+    }
+
+    #masters-dollar-sign {
+        font-size: 24px;
+        position: relative;
+        margin-right: 98px;
+        margin-top: 17px;
+    }
+
+    #price-value {
+        font-size: 53px;
+        position: relative;
+        margin-top: -61px;
+        margin-right: 27px;
+    }
+
+    #masters-price-value {
+        font-size: 53px;
+        position: relative;
+        margin-top: -65px;
+        margin-right: 32px;
+    }
+
+    #per-month {
+        color: grey;
+        position: relative;
+        margin-top: -95px;
+        margin-left: 53px;
+    }
+
+    #masters-per-month {
+        color: grey;
+        position: relative;
+        margin-top: -94px;
+        margin-left: 72px;
+    }
+    
+    .load-faculty-dropdown > select {
+        cursor: pointer;
+        position: relative;
+        margin-top:-2px;
+        width: 375px;
+        height: 47px;
+        border-radius: 6px;
+        margin-right: 3px;
+        font-size: 17px;
+        color: white;
+        padding-left: 20px;
+        overflow: hidden;
+        appearance: none;
+        background-image: url(assets/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 97% 60%;
+    }
+
+    .load-faculty-dropdown {
+        position: relative;
+    }
+
+    .bachelor-container select {
+        color: black;
+    }
+
+    .load-faculty-dropdown label {
+        float: left;
+        margin-left: 30px;
+        padding-bottom: 20px;
+    }
+
+    #m-load-and-faculty {
+        color: black;
+    }
+
+    #load-and-faculty {
+        background-color: #000D47;
+        color: white;
+    }
+    
+    #masters-label {
+        padding-left: 11px;
+    }
+
+    .degree-information {
+        margin-top: 26px;
+        position: relative;
+        text-align: left;
+    }
+
+    .degree-information p {
+        padding-left: 32px;
+        padding-top: 12px;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    .masters-information p {
+        padding-left: 41px;
+    }
+
+    #tick-img {
+        height: 18px;
+        width: 18px;
+        margin-right: 400px;
+    }
+
+    #tick-txt {
+        margin-top: -33px;
+        padding-left: 27px;
+        padding-right: 70px;
+        line-height: 19px;
+    }
+
+    #free-trial-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 275px;
+        background-color: #4949E4;
+        color: white;
+        width: 395px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #masters-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 221px;
+        background-color: #4949E4;
+        color: white;
+        width: 398px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #doc-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 316px;
+        background-color: #4949E4;
+        color: white;
+        width: 397px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #free-trial-btn:hover, #masters-btn:hover, #doc-btn:hover {
+        background-color: #3A3AB6;
+    }
+
+    .vertical-line {
+        border: thin solid #2F3A69;
+        border-radius: 10px;
+        height: 815px;
+        position: absolute;
+        margin-top: 6px;
+    }
+
+    .vertical-line-bottom {
+        border: thin solid #3E40CE;
+        height: 16px;
+        position: relative;
+        margin-left: 8px;
+        margin-top: 18px;
+    }
+
+    .masters-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 442px;
+        height: 904px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        margin-top: -38px;
+        color: black;
+    }
+
+    .masters-text-container {
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    #masters-doc-top-text {
+        padding-top: 0px;
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-bottom: 3px;
+        line-height: 26px;
+    }
+
+    #doc-second-text {
+        padding-top: 8px;
+        padding-left: 65px;
+        padding-right: 65px;
+        padding-bottom: 9px;
+        line-height: 26px;
+    }
+
+    .doctorate-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 441px;
+        height: 904px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        margin-top: -38px;
+        color: black;
+    }
+
+    .doctorate-text-container {
+        text-align: center;
+        padding-top: 70px;
+    }
+
+    #blue-plus {
+        color: #51C2D9;
+    }
+
+    .features-faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        padding-top: 35px;
+    }
+}
+
+@media screen and 
+    (max-width: 1099px) {
+    
+    .degree-tab-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .degree-tab {
+        background-color: #000D47;
+        color: white;
+        border: thin solid white;
+        width: 330px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    #bachelor-tab {
+        border-top-left-radius: 4px;
+        background-color: white;
+        color: #4949E4;
+    }
+
+    #doctorate-tab {
+        border-top-right-radius: 4px;
+    }
+
+    .degree-container {
+        background-color: white;
+        color: black;
+        width: 990px;
+        height: 780px;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .bachelor-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bachelor-text-container {
+        padding-top: 50px;
+    }
+
+    #bachelor-promo-desc {
+        font-size: 23px;
+    }
+
+    #starting-at {
+        color: grey;
+        font-size: 18px;
+    }
+
+    #dollar-sign {
+        font-size: 24px;
+        position: relative;
+        margin-right: 83px; 
+        margin-top: 2px;
+    }
+
+    #masters-dollar-sign {
+        font-size: 24px;
+        position: relative;
+        margin-right: 98px;
+        margin-top: 17px;
+    }
+
+    #price-value {
+        font-size: 53px;
+        position: relative;
+        margin-top: -61px;
+        margin-right: 27px;
+    }
+
+    #masters-price-value {
+        font-size: 53px;
+        position: relative;
+        margin-top: -65px;
+        margin-right: 32px;
+    }
+
+    #per-month {
+        color: grey;
+        position: relative;
+        margin-top: -95px;
+        margin-left: 53px;
+    }
+
+    #masters-per-month {
+        color: grey;
+        position: relative;
+        margin-top: -94px;
+        margin-left: 72px;
+    }
+
+    .load-faculty-dropdown > select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url(assets/arrow.svg);
+        background-repeat: no-repeat;
+        background-position: 97% 55%;
+        width: 900px;
+        height: 47px;
+        max-width: 100%;
+        border-radius: 6px;
+        margin-right: 3px;
+        font-size: 17px;
+        padding-left: 20px;
+    }
+
+    .bachelor-container select {
+        color: #000D47;
+    }
+
+    .load-faculty-dropdown label {
+        float: left;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-left: 33px;
+    }
+
+    .degree-information p {
+        text-align: left;
+        padding-top: 30px;
+        color: #000D47;
+        margin-left: 35px;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    #tick-img {
+        height: 18px;
+        width: 18px;
+        margin-right: 910px;
+    }
+
+    #tick-txt {
+        margin-top: -50px;
+        padding-left: 27px;
+        padding-right: 70px;
+        line-height: 19px;
+    }
+
+    #free-trial-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 75px;
+        background-color: #4949E4;
+        color: white;
+        width: 930px;
+        max-width: 100%;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #masters-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 221px;
+        background-color: #4949E4;
+        color: white;
+        width: 398px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #doc-btn {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 316px;
+        background-color: #4949E4;
+        color: white;
+        width: 397px;
+        height: 45px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+
+    #free-trial-btn:hover, #masters-btn:hover, #doc-btn:hover {
+        background-color: #3A3AB6;
+    }
+
+    .features-faq {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+        padding-top: 35px;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Responsive Static Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <div class="billing-frequency">
+        <h1>Monthly</h1>
+        <label class="toggle-button">
+            <input type="checkbox" checked>
+            <span class="round-slider">
+            </span>
+        </label>
+        <h1>Annually</h1>
+    </div>
+
+    <div class="degree-tab-container">
+        <button class="degree-tab" id="bachelor-tab" onclick="openBachelor()" autofocus>BACHELOR</button>
+        <button class="degree-tab" id="masters-tab" onclick="openMasters()">MASTERS</button>
+        <button class="degree-tab" id="doctorate-tab" onclick="openDoctorate()">DOCTORATE</button>    
+    </div>
+
+    <div class="degree-container">
+        <div class="bachelor-container">
+            <div class="bachelor-text-container">
+                <h2>Bachelor</h2>
+                <p id="bachelor-promo-desc">Get the basic tools you need to tackle most industries</p>
+                <p id="starting-at">Starting at</p>
+                <div class="price-container">
+                    <p id="dollar-sign">$</p>            
+                    <p id="price-value">0</p>
+                    <p id="per-month">/mo.</p>
+                </div>
+                
+                <div class="load-faculty-dropdown">
+                    <label>Choose your load and faculty</label>
+                    <br>
+                    <select name="load-and-faculty" id="load-and-faculty">
+                        <option value="ft-eng" selected>Full time, Engineering</option>
+                        <option value="pt-eng">Part time, Engineering</option>
+                        <option value="ft-sci">Full time, Science</option>
+                        <option value="pt-sci">Part time, Science</option>
+                    </select>
+                </div>
+                
+                <div class="degree-information">
+                    <p><b>Includes:</b></p>
+                    <ul>
+                        <li>
+                            <img id="tick-img" src="assets/tick.svg">
+                            <p id="tick-txt">Up to 3 UNSW courses</p>
+                        </li>
+                        <li>
+                            <img id="tick-img" src="assets/tick.svg">
+                            <p id="tick-txt">Hosted in the cloud</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button id="free-trial-btn"><b>START FREE TRIAL</b></button>
+        </div>
+        
+        <div class="masters-doc-container">
+            <div class="masters-container">
+                <div class="masters-text-container">
+                    <h2>Masters</h2>
+                    <p id="masters-doc-top-text">Enhance your base knowledge and put yourself ahead of the rest</p>
+                    <p id="starting-at">Starting at</p>
+                    <div class="price-container">
+                        <p id="masters-dollar-sign">$</p>            
+                        <p id="masters-price-value">19</p>
+                        <p id="masters-per-month">/mo.</p>
+                    </div>
+
+                    <div class="load-faculty-dropdown">
+                        <label id="masters-label">Choose your load and faculty</label>
+                        <br>
+                        <select name="load-and-faculty" id="m-load-and-faculty">
+                            <option value="ft-eng" selected>Full time, Engineering</option>
+                            <option value="pt-eng">Part time, Engineering</option>
+                            <option value="ft-sci">Full time, Science</option>
+                            <option value="pt-sci">Part time, Science</option>
+                        </select>
+                    </div>
+
+                    <div class="degree-information masters-information">
+                        <p>Everything in Bachelor, <span id="blue-plus">plus:</span></p> 
+                        <ul>
+                            <li>
+                                <img id="tick-img" src="assets/tick.svg">
+                                <p id="tick-txt">Get access to further courses unavailable to Bachelors</p>
+                            </li>
+                            <li>
+                                <img id="tick-img" src="assets/tick.svg">
+                                <p id="tick-txt">Opportunities for upper tier students to do focused research</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="masters-btn"><b>START FREE TRIAL</b></button>
+            </div>
+
+            <div class="vertical-line"></div>  
+                            
+            <div class="doctorate-container">
+                <div class="doctorate-text-container">
+                    <h2>Doctorate</h2>
+                    <p id="masters-doc-top-text">Complete deep research to completely standout in a unique way</p>
+                    <p id="doc-second-text">Contact us to learn more about scholarships and other information</p>
+                    <div class="degree-information masters-doc-information">
+                        <p>Everything in Masters, <span id="blue-plus">plus:</span></p> 
+                        <ul>
+                            <li>
+                                <img id="tick-img" src="assets/tick.svg">
+                                <p id="tick-txt">You can get to call yourself "Doctor!"</p>
+                            </li>
+                            <li>
+                                <img id="tick-img" src="assets/tick.svg">
+                                <p id="tick-txt">Enjoy the thrilling experience of trying to get published</p>
+                            </li>
+                            <li>
+                                <img id="tick-img" src="assets/tick.svg">
+                                <p id="tick-txt">Free 10 word unique thesis title generated for you</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="doc-btn"><b>CONTACT US</b></button>
+            </div>
+        </div>
+    </div>
+    <div class="features-faq">
+        <p>> See All Features</p>
+        <div class="vertical-line-bottom"></div>
+        <p>> View FAQ</p>
+    </div>
+</body>
+</html>
